@@ -37,6 +37,37 @@
     }));
   }
 
+  /* ---------- scroll-reveal: photos go B&W -> colour as they cross the viewport ----------
+     Each img.js-reveal is driven by its own --c: 0 when its bottom is at the viewport
+     bottom, 50% when its middle is centred, 100% when its top reaches the top; then holds.
+     Reverses on scroll-up. Reduced-motion keeps the static grayscale. */
+  const revealImgs = document.querySelectorAll("img.js-reveal");
+  if (revealImgs.length && !reduced && "IntersectionObserver" in window) {
+    document.documentElement.classList.add("reveal-on");
+    const vis = new Set();
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) vis.add(e.target);
+        else { vis.delete(e.target); e.target.style.setProperty("--c", e.boundingClientRect.top < 0 ? "1" : "0"); }
+      }
+    }, { threshold: 0 });
+    revealImgs.forEach((el) => io.observe(el));
+    let rTick = false;
+    const rUpd = () => {
+      rTick = false;
+      const vh = innerHeight;
+      vis.forEach((el) => {
+        const r = el.getBoundingClientRect();
+        const p = 1 - r.top / Math.max(vh - r.height, 1); // 0% bottom@bottom, 50% middle centred, 100% top@top
+        el.style.setProperty("--c", Math.min(Math.max(p, 0), 1).toFixed(3));
+      });
+    };
+    const rOnScroll = () => { if (!rTick) { rTick = true; requestAnimationFrame(rUpd); } };
+    addEventListener("scroll", rOnScroll, { passive: true });
+    addEventListener("resize", rOnScroll, { passive: true });
+    rUpd();
+  }
+
   /* ---------- text-the-founder panels ---------- */
   const isIOS = /iP(hone|ad|od)/.test(navigator.userAgent) || (/Mac/.test(navigator.userAgent) && "ontouchend" in document);
   const buildSms = (panel) => {

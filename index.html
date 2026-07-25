@@ -142,51 +142,37 @@
     </div>
   </section>
 
-  <!-- BEAT 1.5 · THE COMFORT WAR · the hospitality-native insight -->
+  <!-- BEAT 1.5 · THE COMPRESSOR · high-level framing -->
   <section class="beat beat--rule" id="comfort" aria-labelledby="comfort-h">
     <div class="wrap beat__narrow">
-      <h2 id="comfort-h">The comfort you sell and the comfort you buy are two different numbers.</h2>
-      <p class="lead">The front desk sells a room for the nights it's occupied. The building conditions it for all of them. <strong>Every guest room is heated or cooled to full comfort around the clock &mdash; sold or empty, checked in or not</strong> &mdash; because no one has connected what the reservation system knows to what the thermostats do.</p>
-      <p>Those two systems are almost never wired to each other, and neither is measured against occupancy. The property management system knows exactly which rooms are dark tonight; the HVAC conditions them anyway. It is the most expensive gap in the building, and it never shows up as a line item anywhere.</p>
-      <p><strong>We measure it before anyone proposes equipment.</strong> Occupancy-aware setback and controls are routinely worth more than any single box on the roof, and you cannot know how much until someone reads the building against its own occupancy.</p>
+      <h2 id="comfort-h">Most of your bill is the compressor. It runs whether it's cooling or not.</h2>
+      <p class="lead">On most hotel systems it burns full power even when it isn't cooling anything. You pay for that either way. We take the cost out, and on the bigger systems we pull some of the heat the compressor needs from the sun. The room still sits at 72. The bill doesn't.</p>
     </div>
     <div class="wrap">
-      <figure class="fig" aria-label="Diagram: eight guest rooms on a floor, five sold and three empty, all eight conditioned to full comfort around the clock, because the reservation system that knows which rooms are occupied is not connected to the HVAC">
-        <svg viewBox="0 0 640 300" role="img" aria-hidden="true">
-          <text class="lbl lbl--ink" x="24" y="46">occupancy &middot; what the front desk sees</text>
-          <!-- the floor of eight rooms -->
-          <path class="d" pathLength="1" style="--d:0" d="M24 66 H616 M24 190 H616 M24 66 V190 M616 66 V190"/>
-          <path class="d soft" pathLength="1" style="--d:1" d="M98 66 V190 M172 66 V190 M246 66 V190 M320 66 V190 M394 66 V190 M468 66 V190 M542 66 V190"/>
-          <!-- occupied rooms 1,2,4,6,7: a bed glyph -->
-          <g class="fade" style="--o:0.9">
-            <rect x="39" y="92" width="44" height="20" rx="2"/><rect x="39" y="88" width="14" height="8" rx="1.5"/>
-            <rect x="113" y="92" width="44" height="20" rx="2"/><rect x="113" y="88" width="14" height="8" rx="1.5"/>
-            <rect x="261" y="92" width="44" height="20" rx="2"/><rect x="261" y="88" width="14" height="8" rx="1.5"/>
-            <rect x="409" y="92" width="44" height="20" rx="2"/><rect x="409" y="88" width="14" height="8" rx="1.5"/>
-            <rect x="483" y="92" width="44" height="20" rx="2"/><rect x="483" y="88" width="14" height="8" rx="1.5"/>
-          </g>
-          <text class="lbl" x="61"  y="134" text-anchor="middle">SOLD</text>
-          <text class="lbl" x="135" y="134" text-anchor="middle">SOLD</text>
-          <text class="lbl soft-t" x="209" y="134" text-anchor="middle">EMPTY</text>
-          <text class="lbl" x="283" y="134" text-anchor="middle">SOLD</text>
-          <text class="lbl soft-t" x="357" y="134" text-anchor="middle">EMPTY</text>
-          <text class="lbl" x="431" y="134" text-anchor="middle">SOLD</text>
-          <text class="lbl" x="505" y="134" text-anchor="middle">SOLD</text>
-          <text class="lbl soft-t" x="579" y="134" text-anchor="middle">EMPTY</text>
-          <!-- the HVAC unit under every room, all on -->
-          <g class="d" pathLength="1" style="--d:2">
-            <rect x="45"  y="158" width="32" height="14" rx="1.5"/><rect x="119" y="158" width="32" height="14" rx="1.5"/>
-            <rect x="193" y="158" width="32" height="14" rx="1.5"/><rect x="267" y="158" width="32" height="14" rx="1.5"/>
-            <rect x="341" y="158" width="32" height="14" rx="1.5"/><rect x="415" y="158" width="32" height="14" rx="1.5"/>
-            <rect x="489" y="158" width="32" height="14" rx="1.5"/><rect x="563" y="158" width="32" height="14" rx="1.5"/>
-          </g>
-          <path class="d soft" pathLength="1" style="--d:3" d="M55 154 q6 -5 12 0 M129 154 q6 -5 12 0 M203 154 q6 -5 12 0 M277 154 q6 -5 12 0 M351 154 q6 -5 12 0 M425 154 q6 -5 12 0 M499 154 q6 -5 12 0 M573 154 q6 -5 12 0"/>
-          <!-- the bracket: all eight conditioned the same -->
-          <path class="d soft" pathLength="1" style="--d:4" d="M24 208 v10 H616 v-10"/>
-          <text class="lbl lbl--ink" x="320" y="238" text-anchor="middle">conditioning &middot; what the meter sees: all eight, all night</text>
-          <text class="lbl soft-t" x="320" y="286" text-anchor="middle">eight rooms &middot; one system conditions them all &middot; occupancy the meter never sees</text>
+      <figure class="fig" aria-label="Bar chart: the energy it takes to hold a hotel room at 72 degrees. Today's bar is tall, and its top portion is shaded to mark the part that does no cooling. After, the bar is short, holding the same 72 degrees for far less energy.">
+        <svg viewBox="0 0 640 320" role="img" aria-hidden="true">
+          <defs>
+            <pattern id="hatch-comfort" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+              <line x1="0" y1="0" x2="0" y2="7" stroke="currentColor" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <text class="lbl lbl--ink" x="48" y="40">energy to hold the room at 72&deg;</text>
+          <!-- today: a tall column, the top portion doing no cooling -->
+          <rect class="d" pathLength="1" style="--d:0" x="170" y="72" width="110" height="198"/>
+          <rect class="fade" style="--o:0.4" x="170" y="72" width="110" height="110" fill="url(#hatch-comfort)"/>
+          <text class="lbl" x="225" y="62" text-anchor="middle">does no cooling</text>
+          <!-- after: same cooling delivered, the waste gone -->
+          <rect class="d" pathLength="1" style="--d:1" x="360" y="182" width="110" height="88"/>
+          <!-- the cooling actually delivered: identical in both -->
+          <line class="dash fade" x1="170" y1="182" x2="490" y2="182"/>
+          <text class="lbl" x="498" y="186">the cooling you actually get</text>
+          <!-- baseline and bar labels -->
+          <line class="d soft" pathLength="1" style="--d:2" x1="48" y1="270" x2="592" y2="270"/>
+          <text class="lbl" x="225" y="292" text-anchor="middle">today</text>
+          <text class="lbl" x="415" y="292" text-anchor="middle">after</text>
+          <text class="lbl soft-t" x="320" y="312" text-anchor="middle">same 72&deg;, a smaller bill</text>
         </svg>
-        <figcaption>Fig. 02 &middot; The most expensive gap in the building</figcaption>
+        <figcaption>Fig. 02 &middot; Same 72&deg;, a smaller bill</figcaption>
       </figure>
     </div>
   </section>
@@ -259,7 +245,7 @@
   <section class="beat beat--dark always" id="always" aria-labelledby="always-h">
     <div class="wrap beat__narrow">
       <h2 id="always-h">A hotel never closes.</h2>
-      <p class="lead lead--dark always__lede-num">At 2 a.m. the lobby is empty, the restaurant is dark, and the lot is still. <strong>The building isn't.</strong> Guest-room HVAC holds every occupied room, the hot water stays hot for the early flights, the corridors and life-safety systems never switch off. It's the one building type that runs every hour of the year &mdash; and the one place waste compounds around the clock.<sup class="fn"><a href="#notes" aria-label="See note 12">12</a></sup></p>
+      <p class="lead lead--dark always__lede-num">At 2 a.m. the lobby is empty, the restaurant is dark, and the lot is still. <strong>The building isn't.</strong> Guest-room HVAC holds every occupied room, the hot water stays hot for the early flights, the corridors and life-safety systems never switch off. It's the one building type that runs every hour of the year, and the one place waste compounds around the clock.<sup class="fn"><a href="#notes" aria-label="See note 12">12</a></sup></p>
       <p class="readout readout--time">8,760<small><strong>hours a year the building never gets to rest.</strong> An office powers down at night and on weekends; a hotel never does.</small></p>
       <figure class="fig" aria-label="Diagram: over one day, the hotel's public spaces wind down overnight while the guest-floor load stays high the entire time, straight through the small hours">
         <svg viewBox="0 0 640 300" role="img" aria-hidden="true">
@@ -281,7 +267,7 @@
       </figure>
       <figure class="plate plate--dark">
         <div class="plate__frame"><img src="assets/img/always-night.jpg" alt="Illustrative: a hotel tower after midnight, dark against the sky except for a grid of lit guest-room windows, each one a room still being conditioned" loading="lazy"></div>
-        <figcaption>Survey plate 1 &middot; A hotel after midnight &mdash; every lit window is a room still running &middot; illustrative<sup class="fn"><a href="#notes" aria-label="See note 1">1</a></sup></figcaption>
+        <figcaption>Survey plate 1 &middot; A hotel after midnight &middot; every lit window is a room still running &middot; illustrative<sup class="fn"><a href="#notes" aria-label="See note 1">1</a></sup></figcaption>
       </figure>
       <p class="always__note">This is why we start with the meter, not the roof: in a building that never rests, the fix attached to the load that never stops is the one that pays the most.</p>
     </div>
@@ -291,7 +277,7 @@
   <section class="beat beat--rule" id="spread" aria-labelledby="spread-h">
     <div class="wrap beat__narrow">
       <h2 id="spread-h">Your worst property is hiding in the average.</h2>
-      <p class="lead">Same flag, same brand standard, the same equipment package on the roof &mdash; and a spread between your best property and your worst that routinely runs into double digits per available room. <strong>The portfolio report shows one number. The properties bleeding inside it are invisible.</strong></p>
+      <p class="lead">Same flag, same brand standard, the same equipment package on the roof. And a spread between your best property and your worst that routinely runs into double digits per available room. <strong>The portfolio report shows one number. The properties bleeding inside it are invisible.</strong></p>
       <p>Nobody ranks them, because ranking them means pulling twelve months of interval data from every meter in the portfolio, and it is nobody's job to go get it. It is the first thing we do, before a single piece of equipment is discussed.</p>
     </div>
     <div class="wrap">
@@ -480,7 +466,7 @@
   <section class="beat beat--rule" id="proof" aria-labelledby="proof-h">
     <div class="wrap beat__narrow">
       <h2 id="proof-h">Measured at 200+ named sites.</h2>
-      <p class="lead">Metered results from the technologies we install, at the sites named, under their own conditions &mdash; the same rooftop, compressor, and coil technology that runs your property.<sup class="fn"><a href="#notes" aria-label="See notes 1 and 9">1, 9</a></sup> <strong>If a claim can't survive your controller, we don't make it.</strong></p>
+      <p class="lead">Metered results from the technologies we install, at the sites named, under their own conditions: the same rooftop, compressor, and coil technology that runs your property.<sup class="fn"><a href="#notes" aria-label="See notes 1 and 9">1, 9</a></sup> <strong>If a claim can't survive your controller, we don't make it.</strong></p>
       <div class="ledger" id="ledger" aria-hidden="true">
         <div class="ledger__col" style="--dur: 210s"></div>
         <div class="ledger__col" style="--dur: 260s"></div>
@@ -547,7 +533,7 @@
   <section class="beat beat--rule" id="success" aria-labelledby="success-h">
     <div class="wrap beat__narrow">
       <h2 id="success-h">What it looks like when the number is real.</h2>
-      <p class="lead">A lower bill in every property, proven on your own meters and holding month after month.<sup class="fn"><a href="#notes" aria-label="See note 1">1</a></sup> Rooftops and PTACs that outlive their replacement schedule instead of dying early.<sup class="fn"><a href="#notes" aria-label="See note 12">12</a></sup> A portfolio you can finally rank. And the part people remember: <strong>walking into the next asset review with a number nobody can argue with &mdash; one that shows up in NOI and in what the property is worth.</strong></p>
+      <p class="lead">A lower bill in every property, proven on your own meters and holding month after month.<sup class="fn"><a href="#notes" aria-label="See note 1">1</a></sup> Rooftops and PTACs that outlive their replacement schedule instead of dying early.<sup class="fn"><a href="#notes" aria-label="See note 12">12</a></sup> A portfolio you can finally rank. And the part people remember: <strong>walking into the next asset review with a number nobody can argue with, one that shows up in NOI and in what the property is worth.</strong></p>
     </div>
   </section>
 

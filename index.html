@@ -31,8 +31,13 @@
 
 <main id="main">
 
-  <!-- HERO · the exhibit: a bill, read the way we read it -->
+  <!-- HERO · the exhibit: a bill on a hotel that lights up as you scroll -->
+  <div class="hero-scrolly">
   <section class="hero" id="top" aria-labelledby="hero-h">
+    <div class="hero__media" aria-hidden="true">
+      <img src="assets/img/hero-hotel.jpg" alt="" loading="eager" fetchpriority="high">
+      <div class="hero__scrim"></div>
+    </div>
     <div class="wrap hero__in hero__grid">
       <div class="hero__copy">
         <h1 id="hero-h">Your hotels pay for energy that does no work, then overpay for the energy they actually use.</h1>
@@ -101,7 +106,9 @@
         <figcaption class="bill__cap">Exhibit A &middot; one hotel's month, read the way we read it. Value equivalent at the ~8% cap rate hotels trade at.<sup class="fn"><a href="#notes" aria-label="See note 13">13</a></sup> Figures illustrative.<sup class="fn"><a href="#notes" aria-label="See note 1">1</a></sup></figcaption>
       </figure>
     </div>
+    <div class="scrollcue" aria-hidden="true"><span></span>scroll</div>
   </section>
+  </div>
 
   <!-- BEAT 1 · THE PROBLEM -->
   <section class="beat" id="problem" aria-labelledby="problem-h">

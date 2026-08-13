@@ -103,7 +103,7 @@
       if (!panel) return;
       const open = panel.classList.toggle("is-open");
       btn.setAttribute("aria-expanded", String(open));
-      if (open) { buildSms(panel); panel.querySelector("textarea").focus(); }
+      if (open) { buildSms(panel); const ta = panel.querySelector("textarea"); if (ta) ta.focus(); }
     });
   });
   document.addEventListener("input", (e) => {
@@ -158,7 +158,7 @@
         fetch("https://formsubmit.co/ajax/dan@yourenergyplus.com", {
           method: "POST",
           headers: { "Content-Type": "application/json", "Accept": "application/json" },
-          body: JSON.stringify({ email, _subject: "Estimator unlock (new lead)", page: "energy-plus-landing", _template: "table" }),
+          body: JSON.stringify({ email, _subject: "Estimator unlock (new lead)", page: "hotels-preview", _template: "table" }),
         }).then(finish, finish);
       });
     }
